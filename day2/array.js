@@ -34,3 +34,12 @@ fruitsReverse.splice(1,0,"guava")
 console.log(fruitsReverse)
 fruitsReverse.splice(4,1)
 console.log(fruitsReverse)
+let depthArr=[2,5,[4,6,3],5,[5,6,[5,2,1],9]]
+let combineArr=depthArr.flat(Infinity)
+console.log(combineArr)
+console.log(Array.from("prosenjitdey"))
+let name1="prosenjit"
+let name2="mriganka"
+let name3="debashis"
+let nameArr=Array.of(name1,name2,name3)
+console.log(nameArr)
