@@ -51,4 +51,63 @@ console.log(func(3,6))
 let objFunc=()=>({name:'prosenjit dey'})//when use want tu return an object
 
 // *************************THIS*********************
+console.log(this) //when we console THIS at nodejs that return an empty object 
+// when we console THIS at browser console that return us window object
 
+let student={
+    name:"ricky",
+    class:5,
+    greatting:function(){
+        console.log(`hello ${this.name}. welcome to the class`)
+        console.log(this)
+    }
+}
+console.log(student.greatting())
+
+function checkThis(){
+    
+    console.log(this)
+}
+checkThis();
+
+
+// ***************************IIFE*******************************
+// (immediate invoke function expression)
+
+(function chai(){//named iife
+    console.log('DB CONNECTED')
+})();
+((name)=>console.log(`DB Connected ${name}`))('hitesh')//unnamed iife
+
+// *************************CONTROL FLOW***********************
+//falsy VALUE
+//0,"",FALSE,NULL,UNDEFINE,-0,Nan bigint 0n
+
+//Truthy value
+//"0","-0",[],{},function(){}
+
+if([]){
+    console.log('truty value')
+}
+if(function(){}){
+    console.log('empty function is a truthy value')
+}
+
+let arr=[]
+if(arr.length==0){
+    console.log('array length is zero')
+}
+let obj={}
+if(Object.keys(obj).length==0){
+    console.log('object length is zero')
+}
+
+//nullish coalescing operator ??:null undefine
+
+let val1;
+val1=5??null
+
+val1=10??5
+val1=null??5
+
+console.log(val1)
