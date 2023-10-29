@@ -21,3 +21,18 @@ user.callToAction=function(){
     console.log(`${this.name} is specialist on ${this.speciality.join(",")} `)
 }
 console.log(user.callToAction())
+let obj1={
+    name:"emp1",
+    id:342
+}
+let obj2={
+    email:"emp2@gmail.com",
+    codeid:534
+}
+// let finalObj={...obj1 , ...obj2}
+finalObj=Object.assign({},obj1,obj2)
+console.log("final---",finalObj)
+console.log(Object.keys(user))
+console.log(Object.values(user))
+console.log(Object.entries(user))
+console.log(user.hasOwnProperty("collage"))
