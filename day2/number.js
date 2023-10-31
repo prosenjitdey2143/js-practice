@@ -2,7 +2,7 @@ let num=230
 console.log(num)
 let num1=new Number(230)
 console.log(num1)
-console.log(`totatl price is ${num.toFixed(2)}rs`)
+console.log(`totatl price is ${num.toFixed(2)}rs`)//.ke baad kitne number chaiye
 function fits(x,y){
     if(Number.isInteger(x/y)){
         return "its fit"
