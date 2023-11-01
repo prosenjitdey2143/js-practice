@@ -21,11 +21,14 @@ let startChangeColor=function(){
     function changeBackgroundColor(){
         document.querySelector('.main').style.backgroundColor=createRGB()
     }
-    intervelId=setInterval(changeBackgroundColor,1000)
+    if(!intervelId){
+        intervelId=setInterval(changeBackgroundColor,1000)
+    }
     
 }
 let stopChangeColor=function(){
     clearInterval(intervelId)
+    intervelId=null
 }
 document.querySelector('#start').addEventListener('click',startChangeColor)
 document.querySelector('#end').addEventListener('click',stopChangeColor)
